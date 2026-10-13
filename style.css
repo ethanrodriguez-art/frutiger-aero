@@ -3,3 +3,7 @@ body {
   color: #FFFFFF;
   font-family: Arial;
 }
+
+.drop {
+  text-shadow: 0px, 2px, 4px, rgba(0,0,0,0.5);
+}

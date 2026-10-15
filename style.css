@@ -16,10 +16,10 @@ body {
 }
 
 .titledrop {
-  color: #80DEEA
+  color: #80DEEA;
   text-shadow:
     0 0 5px rgba(144, 202, 249, 0.8),
-    0 0 10px rgba(144, 202, 249,0.8),
+    0 0 10px rgba(144, 202, 249, 0.8),
     0 0 20px rgba(144, 202, 249, 0.7),
     0 0 35px rgba(144, 202, 249, 0.5);
 }

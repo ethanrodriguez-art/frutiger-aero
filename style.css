@@ -16,6 +16,7 @@ body {
 }
 
 .titledrop {
+  text-align: center;
   color: #80DEEA;
   text-shadow:
     0 0 5px rgba(144, 202, 249, 0.8),

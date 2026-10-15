@@ -29,4 +29,5 @@ body {
   background-color: rgba(111 142 181 1);
   border: 5px solid rgba(111 142 181 1);
   width: 42%;
+  border-image: linear-gradient(to bottom, rgba(110 162 204), rgba(144, 202, 249) 1);
 }

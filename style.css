@@ -26,8 +26,13 @@ body {
 }
 
 .border1 {
-  background-color: rgba(111 142 181 1);
-  border: 5px solid rgba(111 142 181 1);
+  background-color: rgba(111, 142, 181, 1);
+  border: 5px solid transparent;
   width: 42%;
-  border-image: linear-gradient(to bottom, rgba(110 162 204), rgba(144, 202, 249) 1);
+  box-sizing: border-box;
+  border-image: linear-gradient(to bottom, rgba(110, 162, 204, 1), rgba(144, 202, 249, 1)) 1;
+  border-image-slice: 1;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  border-radius: 6px;
 }

@@ -26,10 +26,11 @@ body {
 }
 
 .border1 {
+  background-color: linear-gradient(to bottom, rgba(110, 162, 204, 1), rgba(144, 202, 249, 1)) 1;
   border: 5px solid transparent;
   width: 42%;
   box-sizing: border-box;
-  border-image: linear-gradient(to top, rgba(110, 162, 204, 1), rgba(144, 202, 249, 1)) 1;
+  border-image: linear-gradient(to bottom, rgba(110, 162, 204, 1), rgba(144, 202, 249, 1)) 1;
   border-image-slice: 1;
   padding: 1rem;
   margin: 1.5rem auto;

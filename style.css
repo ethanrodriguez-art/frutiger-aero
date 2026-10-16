@@ -38,10 +38,10 @@ body {
 }
 
 .borderTitle {
-  color: #80DEEA;
+  color: #FFFFFF;
   text-shadow:
     0 0 5px rgba(64, 201, 247, 0.8),
     0 0 10px rgba(64, 201, 247, 0.8),
-    0 0 20px rgba(64, 201, 247, 0.8),
-    0 0 35px rgba(64, 201, 247, 0.8);
+    0 0 20px rgba(64, 201, 247, 0.7),
+    0 0 35px rgba(64, 201, 247, 0.5);
 }

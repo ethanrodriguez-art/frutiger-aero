@@ -36,3 +36,12 @@ body {
   margin: 1.5rem auto;
   border-radius: 6px;
 }
+
+.borderTitle {
+  color: #80DEEA;
+  text-shadow:
+    0 0 5px rgba(64, 201, 247, 0.8),
+    0 0 10px rgba(64, 201, 247, 0.8),
+    0 0 20px rgba(64, 201, 247, 0.8),
+    0 0 35px rgba(64, 201, 247, 0.8);
+}

@@ -1,3 +1,8 @@
+@keyframes borderOpenAnimation {
+  from background-border: rgba(110, 162, 204, 0);
+  to background-border: rgba(110, 162, 204, 1);
+}
+
 body {
   /* pure background stuff */
   background-image: url("./background1.jpg");
@@ -26,6 +31,8 @@ body {
 }
 
 .border1 {
+  animation-name: borderOpenAnimation;
+  animation-duration: 1.5s;
   background-color: rgba(110, 162, 204, 1);
   border: 5px solid transparent;
   width: 42%;

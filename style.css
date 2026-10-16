@@ -11,7 +11,7 @@
 
 @keyframes titleOpen {
   from {
-    transform: translateY(-28px)
+    transform: translateY(-198px)
   }
   to {
     transform: translateY(0px)

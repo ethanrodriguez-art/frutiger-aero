@@ -9,6 +9,15 @@
   }
 }
 
+@keyframes titleOpen {
+  from {
+    transform: translateY(-28px)
+  }
+  to {
+    transform: translateY(0px)
+  }
+}
+
 body {
   /* pure background stuff */
   background-image: url("./background1.jpg");
@@ -27,6 +36,7 @@ body {
 }
 
 .titledrop {
+  animation: titleOpen 1s ease forwards;
   text-align: center;
   color: #e9f3fb;
   text-shadow:
@@ -37,7 +47,7 @@ body {
 }
 
 .border1 {
-  animation: borderOpenAnimation 1.5s ease forwards;
+  animation: borderOpenAnimation 2.5s ease forwards;
   background-color: rgba(110, 162, 204, 1);
   border: 5px solid transparent;
   width: 42%;

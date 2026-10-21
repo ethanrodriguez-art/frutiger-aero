@@ -86,7 +86,6 @@ li {
   border: 5px solid transparent;
   width: 42%;
   box-sizing: border-box;
-  background-image: linear-gradient(to bottom, rgba(110, 162, 204, 1), rgba(144, 202, 249, 1)) 1;
   padding: 1rem;
   margin: 1.5rem auto;
   border-radius: 6px;

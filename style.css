@@ -99,3 +99,8 @@ li {
     0 0 20px rgba(64, 201, 247, 0.7),
     0 0 35px rgba(64, 201, 247, 0.5);
 }
+
+.exampleImage {
+  max-width: 100%;
+  height: auto;
+}

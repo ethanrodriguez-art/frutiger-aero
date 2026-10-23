@@ -1,106 +1,229 @@
 @keyframes borderOpenAnimation {
   from {
     opacity: 0;
+    transform: translateY(18px) scale(0.98);
     box-shadow: 0 0 0 rgba(144, 202, 249, 0);
   }
   to {
     opacity: 1;
-    box-shadow: rgba(144, 202, 249, 1);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 18px 42px rgba(41, 104, 168, 0.24);
   }
 }
 
 @keyframes titleOpen {
   from {
-    transform: translateY(-198px)
+    transform: translateY(-198px);
+    opacity: 0;
   }
   to {
-    transform: translateY(0px)
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
+:root {
+  --aero-blue: #8fd3ff;
+  --aero-blue-strong: #5bb3ff;
+  --aero-sky: #dff5ff;
+  --aero-glass: rgba(255, 255, 255, 0.16);
+  --aero-panel: rgba(120, 170, 212, 0.34);
+  --aero-shadow: rgba(43, 92, 154, 0.3);
+  --aero-text: #f4fbff;
+  --aero-text-soft: rgba(244, 251, 255, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* pure background stuff */
-  background-image: url("./background1.jpg");
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(to bottom, rgba(160, 217, 255, 0.2), rgba(16, 44, 73, 0.38)),
+    url("./background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  color: #FFFFFF;
-  font-family: Arial;
+  color: var(--aero-text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.02em;
 }
 
-li {
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.8),
-    0 2px 6px rgba(0,0,0,0.35);
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02) 25%,
+    rgba(86, 153, 219, 0.08) 100%
+  );
+  pointer-events: none;
 }
 
+h1, h2, p, li, a {
+  position: relative;
+  z-index: 1;
+}
+
+li,
 .drop {
   text-shadow:
-    0 1px 0 rgba(255,255,255,0.8),
-    0 2px 6px rgba(0,0,0,0.35);
+    0 1px 0 rgba(255, 255, 255, 0.8),
+    0 2px 8px rgba(0, 0, 0, 0.25);
+  color: var(--aero-text-soft);
 }
 
 .titledrop {
-  animation: titleOpen 1s ease forwards;
+  animation: titleOpen 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   text-align: center;
-  color: #e9f3fb;
+  color: #eaf7ff;
+  margin: 0.7rem auto;
+  letter-spacing: 0.06em;
   text-shadow:
-    0 0 5px rgba(144, 202, 249, 0.8),
-    0 0 10px rgba(144, 202, 249, 0.8),
-    0 0 20px rgba(144, 202, 249, 0.7),
-    0 0 35px rgba(144, 202, 249, 0.5);
+    0 0 8px rgba(144, 202, 249, 0.95),
+    0 0 18px rgba(144, 202, 249, 0.8),
+    0 0 30px rgba(144, 202, 249, 0.65),
+    0 0 54px rgba(144, 202, 249, 0.45);
+  filter: drop-shadow(0 6px 24px rgba(16, 98, 170, 0.5));
+}
+
+h1.titledrop {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-top: 2rem;
+}
+
+h2.titledrop {
+  font-size: clamp(1.4rem, 2.3vw, 2.25rem);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.border1,
+.border2 {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(157, 203, 241, 0.3),
+    rgba(93, 157, 214, 0.2)
+  );
+  border: 2px solid rgba(255, 255, 255, 0.38);
+  box-sizing: border-box;
+  width: min(760px, 82%);
+  margin: 1.5rem auto;
+  padding: 1.5rem 1.4rem 1.2rem;
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 10px 26px rgba(31, 77, 128, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .border1 {
-  animation: borderOpenAnimation 2.5s ease forwards;
-  background-color: rgba(110, 162, 204, 1);
-  border: 5px solid transparent;
-  width: 42%;
-  box-sizing: border-box;
-  border-image: linear-gradient(to bottom, rgba(110, 162, 204, 1), rgba(144, 202, 249, 1)) 1;
-  border-image-slice: 1;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  border-radius: 6px;
-}
-
-.borderTitle {
-  color: #FFFFFF;
-  text-shadow:
-    0 0 5px rgba(64, 201, 247, 0.8),
-    0 0 10px rgba(64, 201, 247, 0.8),
-    0 0 20px rgba(64, 201, 247, 0.7),
-    0 0 35px rgba(64, 201, 247, 0.5);
-}
-
-.bottombar {
-  width: 100%;
-  height: 55px;
-  background-color: rgba(255,255,255,0.4);
+  animation: borderOpenAnimation 2.3s ease forwards;
 }
 
 .border2 {
-  animation: borderOpenAnimation 3.3s ease forward;
-  background-color: rgba(110, 162, 204, 1);
-  border: 5px solid transparent;
-  width: 42%;
-  box-sizing: border-box;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  border-radius: 6px;
+  animation: borderOpenAnimation 3.1s ease forwards;
+}
+
+.borderTitle,
+.examples {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(64, 201, 247, 0.9),
+    0 0 12px rgba(64, 201, 247, 0.8),
+    0 0 24px rgba(64, 201, 247, 0.7),
+    0 0 38px rgba(64, 201, 247, 0.5);
+  margin-top: 0;
+}
+
+.borderTitle {
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
 }
 
 .examples {
-  color: #FFFFFF;
-  text-shadow:
-    0 0 5px rgba(64, 201, 247, 0.8),
-    0 0 10px rgba(64, 201, 247, 0.8),
-    0 0 20px rgba(64, 201, 247, 0.7),
-    0 0 35px rgba(64, 201, 247, 0.5);
+  font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+  text-align: center;
+}
+
+.bottombar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 60px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(129, 179, 227, 0.28)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.bottombar a {
+  color: #f4fbff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.bottombar a:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 16px rgba(32, 92, 157, 0.18);
 }
 
 .exampleImage {
-  max-width: 100%;
+  display: block;
+  width: min(100%, 760px);
   height: auto;
+  margin: 1rem auto 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 12px 28px rgba(18, 51, 91, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+#Examples {
+  padding-bottom: 1.35rem;
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .border1,
+  .border2 {
+    width: min(92%, 780px);
+    padding: 1.1rem 1rem 0.9rem;
+  }
+
+  .bottombar {
+    gap: 0.65rem;
+  }
 }
